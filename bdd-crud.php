@@ -23,7 +23,7 @@ function create_user(string $email,string $password) : int | null {
     return $user_id;
 }
 // Read (login)
-function get_user(int $id) : array | null {
+function get_user(string $email) : array | null {
     $database = connect_database();
     // TODO 
 
