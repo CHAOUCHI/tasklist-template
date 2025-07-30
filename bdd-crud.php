@@ -32,8 +32,8 @@ function get_user(string $email) : array | null {
 
 
 // CRUD Task
-// Create
-function add_task(string $name,string $description) : int | null {
+// Créer une tache pour l'utilisateur user_id
+function add_task(string $name,string $description,int $user_id) : int | null {
     $database = connect_database();
 
     
@@ -46,8 +46,8 @@ function get_task(int $id) : array | null {
     // TODO
     return $task;
 }
-
-function get_all_task() : array | null {
+// Récupère toutes les taches QUI APPARTIENNENT à l'utilisateur user_id
+function get_all_task(int $user_id) : array | null {
     $database = connect_database();
     // TODO
     return $tasks;
